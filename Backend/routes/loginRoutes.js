@@ -1,53 +1,30 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
-const Login = require('./models/loginModel');
 const bcrypt = require('bcrypt');
-const dotenv = require('dotenv');
-const loginRoutes = require('./routes/loginRoutes')
+const Login = require('../models/loginModel');
 
-dotenv.config();
-const app = express();
-app.use(cors());
-app.use(express.json());
+const router = express.Router();
 
-//db connect
-mongoose.connect(process.env.MONGO_URI)
-.then(()=>console.log("mongodb connected"))
-.catch((err)=>console.log(err));
-
-
-//routes 
-app.use('/api/login',loginRoutes);
-
-
-const createAdminUser = async() =>{
-    const existingAdmin = await Login.findOne({email : 'admin@gmail.com'});
+router.post('/', async (req, res) => {
+    const { email, password } = req.body;
 
     try {
-         if(!existingAdmin){
-    
-        const password = 'admin123'    
-        const hassedPassword = await bcrypt.hash(password,10);
+        const user = await Login.findOne({ email });
+        if (!user) {
+            return res.status(400).json({ message: 'user not found' });
+        }
 
-        const newAdmin = new Login({
-            userName:'Admin',
-            email:'admin@gmail.com',
-            password:hassedPassword,
-        });
-        await newAdmin.save();
-        console.log('saves successfully');
-    }else{
-        console.log('user alrady Exists');
-    }
-}
-    catch(err){
-        console.log('admin creation error ',err.message);
-    }
-};
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Invalid password' });
+        }
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => {
-  console.log(`server is running on port ${PORT}`);
-  createAdminUser();  
+        return res.status(200).json({ message: 'Login Successful', user });
+    }
+    catch (err) {
+        return res.status(500).json({ message: 'server error', error: err.message });
+    }
 });
+
+module.exports = router; 
+ 
