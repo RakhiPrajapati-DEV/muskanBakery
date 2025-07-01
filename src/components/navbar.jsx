@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../style.css';
 import HamMenu from '.';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo/logo.jpg';
 import logo2 from '../assets/images/logo/logo2.png';
 import { FaAngleDown, FaBars } from 'react-icons/fa';
@@ -17,7 +18,8 @@ function Navbar() {
           </a>
           
           <div className="menuLinks">
-            <a className="montserrat" href="index-2.html">Home</a>
+            
+            <Link className="montserrat" to="/">Home</Link>
 
             <div className="dropDown">
               <a className="montserrat">
@@ -47,7 +49,9 @@ function Navbar() {
               </div>
             </div>
 
-            <a className="montserrat" href="about.html">About Us</a>
+            <a className="montserrat" href="#">About Us</a>
+            {/* <Link className="montserrat" to="/About">About Us</Link> */}
+
             <div className="dropDown">
               <a className="montserrat" href="Franchise.html">
                 Franchise Outlets <FaAngleDown />
@@ -59,6 +63,7 @@ function Navbar() {
             </div>
 
             <a className="montserrat" href="contact.html">Contact Us</a>
+
           </div>
 
           <img src={logo2} alt="" className="logo logo2"/>
