@@ -13,7 +13,8 @@ import Testimonial from './components/Testimonial';
 import Count from './components/count';
 import Login from './components/Login';
 import AdminPanel from './components/AdminPanel';
-import ContactMessg from './components/contactMessg';
+import ContactUs from './components/ContactUs';
+
 
 function HomePage() {
   return (
@@ -39,7 +40,7 @@ function LinksRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/Admin" element={<AdminPanel />} />
       <Route path="/About" element={<About />} />
-      <Route path="/Admin/messages" element={<ContactMessg />} />
+      <Route path="/ContactUs" element={<ContactUs />} />
     </Routes>
   );
 }

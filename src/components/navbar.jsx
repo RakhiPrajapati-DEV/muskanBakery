@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo/logo.jpg';
 import logo2 from '../assets/images/logo/logo2.png';
 import { FaAngleDown, FaBars } from 'react-icons/fa';
+import ContactUs from './ContactUs';
 
 function Navbar() {
   return (
@@ -62,7 +63,8 @@ function Navbar() {
               </div>
             </div>
 
-            <a className="montserrat" href="contact.html">Contact Us</a>
+            {/* <a className="montserrat" href="contact.html">Contact Us</a> */}
+            <Link className="montserrat" to="/ContactUs">Contact Us</Link>
 
           </div>
 

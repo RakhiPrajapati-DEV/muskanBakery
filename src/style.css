@@ -1727,3 +1727,289 @@ h3.montserrat.sidebarH.mainH3 {
     /* margin-top: 2rem; */
     padding-top: 2.3rem;
 }
+
+/* banner */
+.Banner{
+    height: 18rem;
+    width: 100vw;
+    background-color: #cd201f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Banner h1{
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.BannerLink{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+/* contact us  */
+.contactSecond {
+    padding: 4rem 0;
+    padding-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffdbe2; */
+    height: 20rem;
+}
+.contactIcons{
+    font-size: 2rem;
+}
+.contactIconsHouse{
+    font-size: 4rem;
+}
+.insideContactSecond {
+    padding: 2rem 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.insideContactSecondCard {
+    height: 15rem;
+    width: 50%;
+    margin: 1rem;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.insideContactSecondCard h2 {
+    margin: 0;
+    align-self: center;
+}
+.insideContactSecondCard p {
+    margin: 0;
+    align-self: center;
+}
+.contactThird {
+    padding: 4rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdbe2;
+}
+.insideContactThird {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insideContactThirdCard {
+    height: 100%;
+    width: 50%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.innerContactThirdCard {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactCard {
+    width: 50%;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contactCard i {
+    color: #000000d1;
+    font-size: 30px;
+    margin: 0.5rem;
+}
+.insideContactCard h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0;
+    color: #000000d1;
+}
+.insideContactCard {
+    margin: 1rem;
+}
+.insideContactCard h2 {
+    font-size: 20px
+}
+.insideContactThirdCard form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+form input {
+    outline: none;
+    border: none;
+    height: 4rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    padding: 0.4rem 1rem;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+}
+.ictc1 {
+    background-color: #fd85b2;
+    padding: 3rem 0;
+    border-radius: 4rem;
+}
+.contactFourth {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insideContactFourth {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insideContactFourth iframe {
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width:1200px) {
+    .insideAboutFirst h2 {
+        font-size: 46px;
+    }
+    
+    .insideAboutFirst p a,
+    .insideAboutFirst p {
+        font-size: 16px;
+    }
+    
+    .insideContactCard h3 {
+        font-size: 18px;
+    }
+    
+    .contactCard {
+        margin: 0;
+    }
+    
+    .insideContactThirdCard form {
+        width: 80%;
+    }
+    
+    form button {
+        font-size: 16px !important;
+    }
+    
+    .ictc1 {
+        padding: 4rem 0;
+    }
+    
+    .contactCard {
+        height: 10rem;
+        margin: 0.5rem 0 !important;
+    }
+}
+@media screen and (max-width:1024px) {
+    .insideSixthSection {
+        overflow: hidden;
+    }
+}
+@media screen and (max-width:900px) {
+    .insideAboutFirst h2 {
+        font-size: 42px;
+    }
+    
+    .aboutFirst {
+        padding: 6rem 0;
+    }
+    
+    .aboutFirstIMG {
+        translate: 0rem 9rem;
+    }
+    
+    .insideContactThird {
+        flex-direction: column;
+    }
+    
+    .insideContactThirdCard {
+        height: 100%;
+        width: 90%;
+    }
+    
+    .contactCard {
+        height: 6rem;
+    }
+    
+    .ictc1 {
+        width: 70% !important;
+    }
+    
+    form input {
+        height: 3.5rem;
+    }
+}
+@media screen and (max-width:765px) {
+    .contactFifth.sixthSection {
+        padding-top: 4rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .insideAboutFirst h2 {
+        font-size: 36px;
+    }
+    
+    .insideAboutFirst p a,
+    .insideAboutFirst p {
+        font-size: 14px;
+    }
+    
+    .aboutFirstIMG img {
+        height: 8rem;
+    }
+    
+    .insideContactSecond {
+        flex-direction: column;
+    }
+    
+    .insideContactSecondCard {
+        height: 6rem;
+        width: 100%;
+    }
+    
+    .innerContactThirdCard {
+        flex-direction: column;
+    }
+    
+    .contactCard {
+        width: 95%;
+    }
+    
+    .ictc1 {
+        width: 90% !important;
+        padding: 2rem 0;
+        border-radius: 2rem;
+    }
+}
+@media screen and (max-width:450px) {
+    .aboutFirstIMG img {
+        height: 6rem;
+    }
+    
+    .insideContactSecondCard {
+        height: 8rem;
+        width: 100%;
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/images/logo/logo.jpg';
 import { Link } from 'react-router-dom';
+import Messages from './Message';
 
 function AdminPanel() {
   return (
@@ -17,15 +18,8 @@ function AdminPanel() {
         <button className="montserrat btn">Logout</button>
       </div>
 
-    </nav>
-    
-    <div className='sider'>
-      <ul>
-        <li>
-          <Link to="/Admin/messages" className='mssgLink'>Messages</Link>
-        </li>
-      </ul>
-    </div>
+    </nav>  
+    <Messages/>
     </>
   );
 }

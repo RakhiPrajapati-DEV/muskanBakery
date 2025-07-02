@@ -5,6 +5,7 @@ const Login = require('./models/loginModel');
 const bcrypt = require('bcrypt');
 const dotenv = require('dotenv');
 const loginRoutes = require('./routes/loginRoutes')
+const ContactRoutes = require('./routes/ContactRoutes');
 
 dotenv.config();
 const app = express();
@@ -19,6 +20,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 //routes 
 app.use('/api/login',loginRoutes);
+app.use('/api/Contact',ContactRoutes);
 
 
 const createAdminUser = async() =>{
